@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-file_name = "C:\\Users\\THINKPAD\\Documents\\kpdl\\baitapcuoimon\\diabetes.csv"
+file_name = "diabetes.csv"
 df = pd.read_csv(file_name)
 print(df.head(10))
 print(" ")
