@@ -6,6 +6,7 @@ import seaborn as sns
 
 file_name = "diabetes.csv"
 df = pd.read_csv(file_name)
+
 print(df.head(10))
 print(" ")
 df.info()
@@ -82,17 +83,17 @@ for i, col in enumerate(columns, 1):
 plt.tight_layout(h_pad=3.0)
 plt.show()
 
-# Tách dữ liệu theo Outcome
-outcome_0 = df[df['Outcome'] == 'No']
-outcome_1 = df[df['Outcome'] == 'Yes']
+# # Tách dữ liệu theo Outcome
+# outcome_0 = df[df['Outcome'] == 'No']
+# outcome_1 = df[df['Outcome'] == 'Yes']
 
-# Vẽ biểu đồ
-plt.figure(figsize=(8, 6))
-plt.scatter(outcome_0['Glucose'], outcome_0['BMI'], color='green', label='Outcome No', alpha=0.6, edgecolors='k')
-plt.scatter(outcome_1['Glucose'], outcome_1['BMI'], color='red', label='Outcome Yes', alpha=0.6, edgecolors='k')
-plt.title("Relationship between Glucose and BMI by Outcome", fontsize=14)
-plt.xlabel("Glucose (mg/dL)", fontsize=12)
-plt.ylabel("BMI (kg/m²)", fontsize=12)
-plt.legend()
-plt.grid(True, linestyle='--', alpha=0.6)
-plt.show()
+# # Vẽ biểu đồ
+# plt.figure(figsize=(8, 6))
+# plt.scatter(outcome_0['Glucose'], outcome_0['BMI'], color='green', label='Outcome No', alpha=0.6, edgecolors='k')
+# plt.scatter(outcome_1['Glucose'], outcome_1['BMI'], color='red', label='Outcome Yes', alpha=0.6, edgecolors='k')
+# plt.title("Relationship between Glucose and BMI by Outcome", fontsize=14)
+# plt.xlabel("Glucose (mg/dL)", fontsize=12)
+# plt.ylabel("BMI (kg/m²)", fontsize=12)
+# plt.legend()
+# plt.grid(True, linestyle='--', alpha=0.6)
+# plt.show()
